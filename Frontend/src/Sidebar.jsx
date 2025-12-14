@@ -17,7 +17,7 @@ function Sidebar() {
 
   // 🔹 Get all threads
   const getAllThreads = async () => {
-    const res = await fetch("http://localhost:8080/api/thread");
+    const res = await fetch("https://souravgpt.onrender.com/api/thread");
     const data = await res.json();
     setAllThreads(data);
   };
@@ -33,7 +33,7 @@ function Sidebar() {
     setPrompt("");
     setReply(null);
 
-    const res = await fetch(`http://localhost:8080/api/chat/${threadId}`);
+    const res = await fetch(`https://souravgpt.onrender.com/api/chat/${threadId}`);
     const data = await res.json();
 
     setPrevChats(data.messages);
@@ -54,7 +54,7 @@ function Sidebar() {
   const deleteChat = async (e, threadId) => {
     e.stopPropagation();
 
-    await fetch(`http://localhost:8080/api/thread/${threadId}`, {
+    await fetch(`https://souravgpt.onrender.com/api/thread/${threadId}`, {
       method: "DELETE",
     });
 
