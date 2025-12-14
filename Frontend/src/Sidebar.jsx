@@ -82,7 +82,7 @@ function Sidebar() {
       <div className="flex items-center justify-between px-4 py-4 border-b border-zinc-800">
         <div className="flex items-center gap-2">
           <SiOpenai className="text-2xl text-green-400" />
-          <span className="font-semibold text-sm">SouravGPT</span>
+          <span className="font-semibold text-sm"></span>
         </div>
         <button className="lg:hidden" onClick={() => setShowSidebar(false)}>
           <FiX />
